@@ -1,0 +1,37 @@
+<form [formGroup]="taskForm" (submit)="handleSubmit()">
+    <h2>Add Task</h2>
+    <div class="input-container">
+        <label for="">Assignment Group</label>
+        <select name="" id="" formControlName="assignmentGroup">
+            <option value="Home">Home</option>
+            <option value="Rent">Rent</option>
+            <option value="LTIMindtree">LTIMindtree</option>
+            <option value="Scania">Scania</option>
+            <option value="Study">Study</option>
+        </select>
+    </div>
+    <div class="input-container">
+        <label for="">Title</label>
+        <input type="text" formControlName="title"/>
+    </div>
+    <div class="input-container">
+        <label for="">Description</label>
+        <textarea name="" id="" cols="30" rows="10" formControlName="description"></textarea>
+    </div>
+    <div class="input-container">
+        <label for="">Due Date</label>
+        <input type="date" formControlName="dueDate"/>
+    </div>
+    <div class="input-container">
+        <label for="">Priority</label>
+        <select name="" id="" formControlName="priority">
+            <option value="LOW">LOW</option>
+            <option value="MEDIUM">MEDIUM</option>
+            <option value="HIGH">HIGH</option>
+        </select>
+    </div>
+    <div class="btn-container">
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </div>
+</form>

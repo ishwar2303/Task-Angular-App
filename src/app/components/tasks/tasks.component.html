@@ -1,0 +1,16 @@
+
+<h1 *ngIf="loadingTasks">Loading...</h1>
+<div *ngIf="!loadingTasks" >
+    <button (click)="refresh()">Refresh</button>
+    <!-- <button (click)="deleteAllTasks()">Delete All Tasks</button> -->
+    <button (click)="deleteTask()">Delete Task</button>
+    <select name="" id="" (change)="filterByGroup(assignmentGroup.value)" #assignmentGroup>
+        <option value="">Select</option>
+        <option value="Home">Home</option>
+        <option value="Rent">Rent</option>
+        <option value="LTIMindtree">LTIMindtree</option>
+        <option value="Scania">Scania</option>
+        <option value="Study">Study</option>
+    </select>
+</div>
+<ng-container #taskComponentContainer ></ng-container>

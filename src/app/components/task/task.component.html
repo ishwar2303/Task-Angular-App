@@ -1,0 +1,41 @@
+<div class="task-container" [id]="task.taskId">
+    <div class="left">
+        <h2>{{task.title}}</h2>
+        <pre>{{task.description}}</pre>
+        <div>
+            <div *ngFor="let comment of task.comments">{{comment}}</div>
+        </div>
+    </div>
+    <div class="right">
+        <div>
+            <label for="">Created On: </label>
+            <span>{{task.addedOn}}</span>
+        </div>
+        <div>
+            <label for="">Due Date: </label>
+            <span>{{task.dueDate}}</span>
+        </div>
+        <div>
+            <label for="">Priority: </label>
+            <span [ngClass]="task.priority" class="priority">{{task.priority}}</span>
+        </div>
+        <div>
+            <label for="">Assignment Group: </label>
+            <span>{{task.assignmentGroup}}</span>
+        </div>
+        <div>
+            <label for="" >Status: </label>
+            <span [ngClass]="task.status" class="status">{{task.status}}</span>
+        </div>
+        <div>
+            <label for="">Task ID:</label>
+            <span>#{{task.taskId}}</span>
+        </div>
+        <div>
+            <label>
+                <input name="taskId" [value]="task.taskId" type="radio" (click)="selectedTask()" />
+                <span>Select Task</span>
+            </label>
+        </div>
+    </div>
+</div>

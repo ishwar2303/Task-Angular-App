@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* font-family */
+@font-face 
+    font-family: comicFont
+    src: url('assets/fonts/comic.ttf')
+
+@font-face 
+    font-family: maianFont
+    src: url('assets/fonts/MAIAN.TTF')
+
+@font-face 
+    font-family: erasMediumFont
+    src: url('assets/fonts/ErasMediumITC.ttf')
+
+
+
+* 
+    font-family: erasMediumFont
+    line-height: 1.4
+    margin: 0
+    padding: 0
+    // -webkit-user-select: none /* Safari */
+    // -ms-user-select: none /* IE 10 and IE 11 */
+    // user-select: none /* Standard syntax */
+
+
+.input-container 
+    display: flex
+    margin-bottom: 20px
+    flex-direction: column
+
+.input-container > div 
+    margin-right: 20px
+
+.input-container > div:last-child 
+    margin-right: 0px
+
+.input-container div 
+    flex: 1
+
+.input-container textarea, .input-container input, .input-container .file, .input-container select 
+    padding: 15px
+    border-radius: 7px
+    border: 0.5px solid rgba(0, 0, 0, 0.3)
+    font-size: 18px
+    box-sizing: border-box
+    width: 100%
+    color: rgb(28, 117, 188)
+
+.input-container .file 
+    cursor: pointer
+    display: flex
+    flex-direction: column
+
+.input-container .file ~ input 
+    display: none
+
+.input-container textarea:focus, .input-container input:focus 
+    outline: none
+    border: 0.5px solid rgb(28, 117, 188)
+    box-shadow: 0px 0px 0px 4px rgb(28, 117, 188, 0.2)
+    transition: 300ms
+
+
+button, select
+    border-radius: 7px
+    padding: 10px
